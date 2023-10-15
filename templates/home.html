@@ -17,16 +17,19 @@
   </head>
 <body>
   <div class ="container">
-    <h1 class="text-center mt-2 mb-4">Jenish careers</h1>
+    <h1 class="text-center mt-2 mb-4">{{company_name}} careers</h1>
     <img class="img-fluid text-center mt-2 mb-4" id="banner" src="static/homepage.jpg">
     <h2 class="text-center">About jenish</h2>
     <p class="text-center">
       It's difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. So far he hasn't relocated where he once saw the passage, but the popularity of Cicero in the 15th century supports the theory that the filler text has been used for centuries.
     </p>
     <h2 class="text-center mt-2 mb-2">open position</h2>
-    <p class="text-center">ToDo-show the job here </p>
-    <div class="text-center">
-      <button class="btn btn-primary btn-lg">Contect Us</button>
+    
+    <div>
+      {% for job in jobs %}
+      {% include'jobitem.html'%}
+      {% endfor %}
+    </div>
       </div>
   </div>
 </body>
